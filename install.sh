@@ -29,3 +29,8 @@ pear install --alldeps phing/phing
 
 # Install Cruise
 # and deal with licenses
+
+
+# Install the seo system (admin dir first)
+svn co svn://10.255.130.18/seosystem/trunk/seoadmin --username=bent --password=huginamug /usr/local/src/seoadmin
+
