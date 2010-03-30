@@ -32,5 +32,5 @@ pear install --alldeps phing/phing
 
 
 # Install the seo system (admin dir first)
-svn co svn://10.255.130.18/seosystem/trunk/seoadmin --username=bent --password=huginamug /usr/local/src/seoadmin
+svn co svn://10.255.130.18/seosystem/trunk/seoadmin/ /usr/local/src/seoadmin --username=bent --password=huginamug 
 
