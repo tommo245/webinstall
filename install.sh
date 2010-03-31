@@ -39,11 +39,10 @@ svn co svn://10.255.130.18/seosystem/trunk/seoadmin/ /usr/share/www/seo_dynamic/
 svn co svn://10.255.130.18/seosystem/trunk/seosupport/ /usr/share/www/seo_dynamic/seosupport --username=bent --password=huginamug
 
 # Grab the vhosts, put them where they need to be
-svn export svn://10.255.130.18/seosystem/trunk/conf/hosts/hxseo /etc/apache2/sites_available/hxseo --username=bent --password=huginamug
+svn export svn://10.255.130.18/seosystem/trunk/conf/hosts/hxseo /etc/apache2/sites-available/hxseo --username=bent --password=huginamug
 
 a2dissite default
 a2ensite hxseo
-a2ensite hxseopreview
 
 # Restart apache
 /etc/init.d/apache2 reload
