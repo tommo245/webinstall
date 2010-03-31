@@ -32,5 +32,8 @@ pear install --alldeps phing/phing
 
 
 # Install the seo system (admin dir first)
-svn co svn://10.255.130.18/seosystem/trunk/seoadmin/ /usr/local/src/seoadmin --username=bent --password=huginamug 
+svn co svn://10.255.130.18/seosystem/trunk/seoadmin/ /usr/local/src/seoadmin --username=bent --password=huginamug
+svn co svn://10.255.130.18/seosystem/trunk/seosupport/ /usr/local/src/seosupport --username=bent --password=huginamug
+
+# Prob want to get pollingStation in here, in the absence of cruise.
 
