@@ -30,10 +30,23 @@ pear install --alldeps phing/phing
 # Install Cruise
 # and deal with licenses
 
+# Create web dirs, and shortcuts
+mkdir -p /usr/share/www/seo_dynamic
+ln -s /usr/share/www /www
 
-# Install the seo system (admin dir first)
-svn co svn://10.255.130.18/seosystem/trunk/seoadmin/ /usr/local/src/seoadmin --username=bent --password=huginamug
-svn co svn://10.255.130.18/seosystem/trunk/seosupport/ /usr/local/src/seosupport --username=bent --password=huginamug
+# Install the seo system 
+svn co svn://10.255.130.18/seosystem/trunk/seoadmin/ /usr/share/www/seo_dynamic/seoadmin --username=bent --password=huginamug
+svn co svn://10.255.130.18/seosystem/trunk/seosupport/ /usr/share/www/seo_dynamic/seosupport --username=bent --password=huginamug
+
+# Grab the vhosts, put them where they need to be
+svn export svn://10.255.130.18/seosystem/trunk/conf/hosts/hxseo /etc/apache2/sites_available/hxseo --username=bent --password=huginamug
+
+a2dissite default
+a2ensite hxseo
+a2ensite hxseopreview
+
+# Restart apache
+/etc/init.d/apache2 reload
 
 # Prob want to get pollingStation in here, in the absence of cruise.
 
