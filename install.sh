@@ -10,8 +10,8 @@ apt-get install -y php5-cli
 # need some tools including phpize
 apt-get install -y php5-dev
 
-# Install apache
-aptitude -y install libapache2-mod-wsgi
+# Install python & apache.
+aptitude -y install libpython2.6 libapache2-mod-wsgi
 
 # Install PEAR
 # PEAR needs to be >=1.8.0 for PHING + dependencies, above cmd only gets 1.7.x
