@@ -3,15 +3,15 @@
 aptitude update
 aptitude -y safe-upgrade
 
+# install apache
+apt-get install -y apache2
+
 # install PHP
-apt-get install -y php5-cli
+apt-get install -y php5 libapache2-mod-php5 php5-mysql
 
 # install PHP-dev
 # need some tools including phpize
 apt-get install -y php5-dev
-
-# Install python & apache.
-aptitude -y install libpython2.6 libapache2-mod-wsgi
 
 # Install PEAR
 # PEAR needs to be >=1.8.0 for PHING + dependencies, above cmd only gets 1.7.x
