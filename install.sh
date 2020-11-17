@@ -27,6 +27,7 @@ apt-get -y install subversion
 pear channel-discover pear.phing.info
 pear install --alldeps phing/phing
 
+
 # Install Cruise
 # and deal with licenses
 
@@ -34,7 +35,7 @@ pear install --alldeps phing/phing
 mkdir -p /usr/share/www/seo_dynamic
 ln -s /usr/share/www /www
 
-# Install the seo system 
+# Install the seo system
 svn co svn://10.255.130.18/seosystem/trunk/seoadmin/ /usr/share/www/seo_dynamic/seoadmin --username=bent --password=huginamug
 svn co svn://10.255.130.18/seosystem/trunk/seosupport/ /usr/share/www/seo_dynamic/seosupport --username=bent --password=huginamug
 
@@ -48,4 +49,3 @@ a2ensite hxseo
 /etc/init.d/apache2 reload
 
 # Prob want to get pollingStation in here, in the absence of cruise.
-
